@@ -9,15 +9,17 @@ class Siswa extends CI_Controller {
     }
 
     public function index() {
+        // Tampilkan halaman login
         $this->load->view('i_siswa_login');
     }
 
-    public function logincheck(){
+    public function logincheck() {
         if (isset($_POST['nik']) && isset($_POST['pass'])) {
             
             $nik = $this->input->post('nik');
             $pass = $this->input->post('pass');
 
+            // Cek cookie jika "remember me" dicentang
             if (isset($_POST["remember"])) {
                 $hour = time() + 3600 * 24 * 30;
                 setcookie('nik', $nik, $hour);
@@ -26,30 +28,20 @@ class Siswa extends CI_Controller {
 
             // Ambil data dari database
             $check = $this->s_login->prosesLogin($nik);
-            $hasil = 0;
-            if (isset($check)) {
-                $hasil++;
-            }
-
-            if ($hasil > 0) {
+            if (!empty($check)) {
                 $data = $this->s_login->viewDataByID($nik); 
                 foreach ($data as $dkey) {
                     $passDB = $dkey->nisn;
-                    
+                    $nama = $dkey->nama; // Ambil nama dari data
                 }
 
-                // Bandingkan password yang dimasukkan dengan yang ada di database
                 if ($pass === $passDB) {
-                    // nisn match
+                    // Set session data
                     $this->session->set_userdata('userlogin', $nik);
                     $this->session->set_userdata('nisn', $passDB); 
-                    $this->session->set_userdata('nama', $nama);
-
-                    // Debugging - Pastikan NISN disimpan di session
-                    // var_dump($this->session->userdata('nisn')); exit;
+                    $this->session->set_userdata('nama', $nama); // Set session untuk nama
 
                     redirect(base_url().'absensi_hp');
-                    
                 } else {
                     // nisn does not match
                     $this->session->set_flashdata("pesan", "<div class=\"alert alert-danger\" id=\"alert\"><i class=\"glyphicon glyphicon-remove\"></i> Gagal Login, nisn salah</div>");
@@ -63,6 +55,7 @@ class Siswa extends CI_Controller {
     }
 
     public function logout() {
+        // Hapus session dan redirect ke halaman login
         $this->session->sess_destroy();
         redirect(base_url().'siswa');
     }
