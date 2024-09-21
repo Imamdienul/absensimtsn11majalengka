@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Absensi_hp extends CI_Controller {
 
-    private $coordinatesDMS = "6°50'23\"S 108°14'19\"E";  
+    private $coordinatesDMS = "6Â°50'23\"S 108Â°14'19\"E";  
     private $centerLat;
     private $centerLng;
     private $allowedRadius = 100; 
@@ -34,7 +34,7 @@ class Absensi_hp extends CI_Controller {
     }
 
     private function dmsToDecimal($dms) {
-        $dms = str_replace(['°', "'", '"'], [' ', ' ', ' '], $dms);
+        $dms = str_replace(['Â°', "'", '"'], [' ', ' ', ' '], $dms);
         $dms = preg_replace('/\s+/', ' ', $dms);
 
         if (preg_match('/(-?\d+)\s+(\d+)\s+(\d+)\s*([NSEW])/', $dms, $matches)) {
