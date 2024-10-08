@@ -3,10 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Absensi_hp extends CI_Controller {
 
-    private $coordinatesDMS = "7°01'13\"S 108°18'14\"E";  
+    private $coordinatesDMS = "6°50'03\"S 108°13'44\"E";  
     private $centerLat;
     private $centerLng;
-    private $allowedRadius = 100; // dalam meter
+    private $allowedRadius = 1000; 
 
     public function __construct() {
         parent::__construct();
@@ -70,9 +70,9 @@ class Absensi_hp extends CI_Controller {
     public function index() {
         $nisn = $this->session->userdata('nisn');
         
-        // Get the first day of the current month
+       
         $start_date = date('Y-m-01');
-        // Get the last day of the current month
+       
         $end_date = date('Y-m-t');
         
         $attendance_data = $this->Absensi_hp_model->get_monthly_attendance($nisn, $start_date, $end_date);
@@ -90,7 +90,7 @@ class Absensi_hp extends CI_Controller {
     private function absen_process($action) {
         $nisn = $this->session->userdata('nisn');
         $nama = $this->session->userdata('nama');
-        $id_rfid = $this->session->userdata('id_rfid');
+        $id_siswa = $this->session->userdata('id_siswa');
         $foto = $this->session->userdata('foto');
         $id_devices = $this->input->post('id_devices');
         $deviceLat = $this->input->post('latitude');
@@ -123,7 +123,7 @@ class Absensi_hp extends CI_Controller {
             return;
         }
 
-        // Check operational time for the current day and action
+      
         if (!$this->Absensi_hp_model->cek_waktu_operasional($action)) {
             $data['message'] = 'Absensi ' . $action . ' hanya dapat dilakukan pada jam operasional yang ditentukan.';
             $data['message_type'] = 'danger';

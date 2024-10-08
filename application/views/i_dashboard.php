@@ -2,7 +2,7 @@
 if ($set == "dashboard") {
     $this->load->view('include/header.php');
 
-    $jmlrfid = isset($rfid) ? count($rfid) : 0;
+    $jmlsiswa = isset($siswa) ? count($siswa) : 0;
     $jmlalat = isset($devices) ? count($devices) : 0;
     $jmlmasuk = isset($masuk) ? count($masuk) : 0;
     $jmlkeluar = isset($keluar) ? count($keluar) : 0;
@@ -32,8 +32,8 @@ if ($set == "dashboard") {
             <div class="col-sm-12">
                 <div class="card m-b-30">
                     <div class="card-body text-center">
-                        <img src="<?=base_url();?>assets/images/logo.png" alt="School Logo" style="max-width: 400px; margin-bottom: 20px;">
-                        <h1 class="card-title">SELAMAT DATANG DI APLIKASI ADMINISTRASI ATTENDACE SYSTEM SI ATA</h1>
+                        <img src="<?=base_url();?>assets/images/logomts.png" alt="School Logo" style="max-width: 320px; margin-bottom: 20px;">
+                        <h1 class="card-title">SELAMAT DATANG DI SISTEM INFORMASI ABSENSI TEPAT AKURAT</h1>
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@ if ($set == "dashboard") {
                             </div>
                             <div class="col-8 ml-auto align-self-center text-center">
                                 <div class="m-l-10 text-white float-right">
-                                    <h5 class="mt-0 round-inner"><?= $jmlrfid; ?></h5>
+                                    <h5 class="mt-0 round-inner"><?= $jmlsiswa; ?></h5>
                                     <p class="mb-0">Jumlah Siswa</p>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@ if ($set == "dashboard") {
                     </div>
                 </div>
             </div>
-            <!-- Column: RFID Scanner -->
+            <!-- Column: siswa Scanner -->
             <div class="col-sm-12 col-md-6 col-xl-3">
                 <div class="card bg-danger m-b-30">
                     <div class="card-body">
@@ -74,7 +74,7 @@ if ($set == "dashboard") {
                             <div class="col-8 ml-auto align-self-center text-center">
                                 <div class="m-l-10 text-white float-right">
                                     <h5 class="mt-0 round-inner"><?= $jmlalat; ?></h5>
-                                    <p class="mb-0">RFID Scanner</p>
+                                    <p class="mb-0">Scanner</p>
                                 </div>
                             </div>
                         </div>

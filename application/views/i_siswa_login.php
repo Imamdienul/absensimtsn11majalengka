@@ -13,15 +13,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         .bg-custom-purple {
-            background-color: #6A0DAD;
+            background-color: #252F75;
         }
 
         .text-custom-purple {
-            color: #6A0DAD;
+            color: #252F75;
         }
 
         .bg-custom-green {
-            background-color: #4CAF50;
+            background-color: #252F75;
         }
 
         /* Remove any spacing around the body */
@@ -34,15 +34,15 @@
 
 <body class="bg-gray-100">
     <div class="min-h-screen flex items-start justify-center bg-gray-100">
-        <div class="w-full max-w-md bg-white shadow-lg rounded-3xl overflow-hidden">
+        <div class="w-full max-w-md bg-white shadow-lg rounded-xl overflow-hidden">
             <div class="p-6 bg-custom-purple text-white">
-                <h1 class="text-2xl font-bold">Selamat Datang</h1>
+                <h1 class="text-2xl font-bold">SISTEM INFORMASI ABSENSI TEPAT AKURAT</h1>
                 <p class="text-xl mt-2">Silahkan Login</p>
             </div>
 
             <div class="p-6">
                 <div class="text-center pt-3">
-                    <img src="<?= base_url(); ?>assets/images/logogisaka.png" alt="logo" class="h-24 mx-auto">
+                    <img src="<?= base_url(); ?>assets/images/logomts.png" alt="logo" class="h-24 mx-auto">
                 </div>
 
                 <?php if ($this->session->flashdata('pesan')) : ?>
@@ -51,7 +51,7 @@
                     </div>
                 <?php endif; ?>
 
-                <form action="<?= base_url(); ?>siswa/logincheck" method="post" class="mt-4">
+                <form action="<?= base_url(); ?>siswal/logincheck" method="post" class="mt-4">
                     <div class="mb-4">
                         <label for="nik" class="block text-gray-700 text-sm font-bold mb-2">NIK:</label>
                         <input type="text" id="nik" name="nik" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Masukkan NIK">

@@ -26,7 +26,7 @@
                     <div class="card-body">
                         <h1 class="mt-0 header-title d-flex justify-content-between align-items-center">
                             <?= $murid->nama; ?>
-                            <a href="<?= base_url() ?>/rfid/edit_rfid/<?= $murid->id_rfid ?>" class="btn btn-info btn-sm">
+                            <a href="<?= base_url() ?>/siswa/edit_siswa/<?= $murid->id_siswa ?>" class="btn btn-info btn-sm">
                                 Edit <i class="fa fa-pencil"></i>
                             </a>
                         </h1>
@@ -46,7 +46,7 @@
                                     </tr>
                                     <tr>
                                         <th scope="row">Tempat, Tanggal Lahir:</th>
-                                        <td><?= $murid->ttl; ?></td>
+                                        <td><?= $murid->tanggal_lahir; ?></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Kelas:</th>
@@ -88,8 +88,8 @@
                             <td><strong>: <?= $murid->nama; ?></strong></td>
                         </tr>
                         <tr>
-                            <th><strong>TTL</strong></th>
-                            <td><strong>: <?= $murid->ttl; ?></strong></td>
+                            <th><strong>tanggal_lahir</strong></th>
+                            <td><strong>: <?= $murid->tanggal_lahir; ?></strong></td>
                         </tr>
                         <tr>
                             <th><strong>NIK</strong></th>
