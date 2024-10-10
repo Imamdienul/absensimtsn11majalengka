@@ -9,7 +9,7 @@
         <meta content="Mannatthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <link rel="shortcut icon" href="<?=base_url();?>assets/images/logomts.png">
+        <link rel="shortcut icon" href="<?=base_url();?>assets/images/gi.png">
 
         <link href="<?=base_url();?>assets/plugins/animate/animate.css" rel="stylesheet" type="text/css">
         <link href="<?=base_url();?>assets/css/bootstrap-material-design.min.css" rel="stylesheet" type="text/css">
@@ -29,7 +29,7 @@
                     <diV class="container">
                         <div class="row">
                             <div class="col-md-6">
-                                <img src="<?=base_url();?>assets/images/logomts.png" alt="" class="img-fluid">
+                                <img src="<?=base_url();?>assets/images/logogisaka.png" alt="" class="img-fluid">
                             </div>
                             <div class="col-md-6">
                                 <div class="card">

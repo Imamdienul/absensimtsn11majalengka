@@ -7,7 +7,7 @@
     <title>SI ATA</title>
     <meta content="SI ATA" name="description" />
     <meta content="Mannatthemes" name="author" />
-    <link rel="shortcut icon" href="<?= base_url(); ?>assets/images/logomts">
+    <link rel="shortcut icon" href="<?= base_url(); ?>assets/images/gi.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="<?= base_url(); ?>promo/css/baru.css" rel="stylesheet">
@@ -27,7 +27,7 @@
             <div class="sidebar-close" id="sidebar-close">
                 <i class="fas fa-times"></i>
             </div>
-            <img src="<?= base_url(); ?>assets/images/logomts" alt="Logo" class="h-16 lg:h-24" style="position: relative; left:22px;">
+            <img src="<?= base_url(); ?>assets/images/gi.png" alt="Logo" class="h-16 lg:h-24" style="position: relative; left:22px;">
             <a href="#" class="sidebar-item" data-page="home">Home</a>
             <a href="#" class="sidebar-item" data-page="tutorial">Tutorial</a>
             <a href="#" class="sidebar-item" data-page="profile">Profile</a>
@@ -42,7 +42,7 @@
                     <h1 class="text-2xl lg:text-3xl font-bold">Selamat Absensi</h1>
                     <p class="text-3xl lg:text-4xl font-bold mt-2"><?= $this->session->userdata('nama'); ?></p>
                 </div>
-                <img src="<?= base_url(); ?>assets/images/logomts" alt="Logo" class="h-16 lg:h-24" style="position: relative; right: 15px;">
+                <img src="<?= base_url(); ?>assets/images/gi.png" alt="Logo" class="h-16 lg:h-24" style="position: relative; right: 15px;">
 
 
             </div>

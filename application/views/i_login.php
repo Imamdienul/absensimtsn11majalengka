@@ -30,7 +30,7 @@
                                 <!-- Login Form -->
                                 <div class="text-center pt-3">
                                     <a href="index.html">
-                                        <img src="<?=base_url();?>assets/images/logomts.png" alt="logo" height="100" />
+                                        <img src="<?=base_url();?>assets/images/logogisaka.png" alt="logo" height="100" />
                                     </a>
                                 </div>
                                 <div class="px-3 pb-3">
@@ -70,7 +70,7 @@
                                                
                                             </div>
                                             <div class="col-sm-7 m-t-20">
-                                                <a href="<?=base_url();?>/siswal" class="text-muted"><i class="mdi mdi-account-circle"></i> Login Siswa ?</a>
+                                                <a href="<?=base_url();?>/register" class="text-muted"><i class="mdi mdi-account-circle"></i> Buat Akun Siswa ?</a>
                                             </div>
                                         </div>
                                     </form>

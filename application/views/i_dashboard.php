@@ -1,14 +1,6 @@
 <?php
 if ($set == "dashboard") {
     $this->load->view('include/header.php');
-
-    $jmlsiswa = isset($siswa) ? count($siswa) : 0;
-    $jmlalat = isset($devices) ? count($devices) : 0;
-    $jmlmasuk = isset($masuk) ? count($masuk) : 0;
-    $jmlkeluar = isset($keluar) ? count($keluar) : 0;
-    $jmlizin = isset($izin) ? count($izin) : 0;
-    $jmlsakit = isset($sakit) ? count($sakit) : 0;
-    $jumlah_tidak_absensi = isset($jumlah_tidak_absensi) ? $jumlah_tidak_absensi : 0;
 ?>
 
 <div class="page-content-wrapper dashborad-v">
@@ -32,7 +24,7 @@ if ($set == "dashboard") {
             <div class="col-sm-12">
                 <div class="card m-b-30">
                     <div class="card-body text-center">
-                        <img src="<?=base_url();?>assets/images/logomts.png" alt="School Logo" style="max-width: 320px; margin-bottom: 20px;">
+                        <img src="<?=base_url();?>assets/images/logogisaka.png" alt="School Logo" style="max-width: 320px; margin-bottom: 20px;">
                         <h1 class="card-title">SELAMAT DATANG DI SISTEM INFORMASI ABSENSI TEPAT AKURAT</h1>
                     </div>
                 </div>

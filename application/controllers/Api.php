@@ -69,7 +69,7 @@ class Api extends CI_Controller {
 				}
 
 				if ($z > 0) {
-					$notif = array('status' => 'failed', 'ket' => 'SISWA TERDAFTAR                           .');
+					$notif = array('status' => 'failed', 'ket' => 'siswa TERDAFTAR                           .');
 					echo json_encode($notif);
 				}else{
 					$device = $this->m_api->getdevice($iddev);

@@ -68,7 +68,7 @@ if($this->session->userdata('userlogin'))
 <div class="topbar-left">
     <div class="text-center">
         <a href="<?= base_url(); ?>dashboard" class="logo">
-            <img src="<?php echo base_url(); ?>assets/images/logomts.png" alt="Logo" style="height: 40px;"> 
+            <img src="<?php echo base_url(); ?>assets/images/logogisaka.png" alt="Logo" style="height: 40px;"> 
            
         </a>
     </div>
