@@ -11,9 +11,11 @@ class Api extends CI_Controller {
     }
 
 	public function index()
-	{
-		$this->load->view('i_api');
-	}
+{
+   
+    echo "REST API for devices";
+}
+
 
 	public function getmodejson(){
 		if (isset($_GET['key']) && isset($_GET['iddev'])) {
